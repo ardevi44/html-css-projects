@@ -1,0 +1,53 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: solid 0.1rem #ccc;
+  border-radius: 3rem;
+  padding: 0.5rem 1rem;
+  min-width: 34.5rem;
+  width: 90%;
+  margin: 10rem auto 0 auto;
+}
+
+.search-bar:focus-within {
+  border: solid 0.1rem #aaa;
+  box-shadow: 0 0.2rem 1.5rem rgb(181 181 181 / 41%);
+}
+
+.search-bar__input {
+  flex-grow: 1;
+  padding: 1rem;
+  font-size: 1.8rem;
+  outline: none;
+  border: none;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actions button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
