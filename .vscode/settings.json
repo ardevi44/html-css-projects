@@ -1,6 +1,0 @@
-{
-    "liveServer.settings.port": 5500,
-    "liveSassCompile.settings.includeItems": [
-      "/05-pokemon-card/css/style.scss",
-  ]
-}
