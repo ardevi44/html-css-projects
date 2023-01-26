@@ -1,24 +1,94 @@
-:root {
-  --light-orange: #F8B788;
-}
-
 html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+*, *:before, *:after {
   margin: 0;
   padding: 0;
 }
 
 body {
   font-size: 1.6rem;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--light-orange);
-  background-image: url("../img/top-back-img.svg");
-  background-size: 5rem;
+  font-family: "Roboto", sans-serif;
+  background-color: #f8b788;
+  background-image: url("../img/top-back-img.svg"), url("../img/bottom-back-img.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.pokemon-card {
+  min-width: 32.8rem;
+  width: 32.8rem;
+  background-color: #fff;
+  border-radius: 1.6rem;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.pokemon-card__img-wrap {
+  border: 0.5rem solid #f67c55;
+  border-radius: 50%;
+  background-color: #fcd3c6;
+  overflow: hidden;
+  box-shadow: 0 -1rem 2rem #f67c55;
+  margin-top: -5.8rem;
+}
+.pokemon-card__image {
+  width: 15rem;
+  padding: 2rem;
+}
+.pokemon-card__header {
+  height: 13rem;
+  background-image: url("./../img/header-background-image.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.pokemon-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1.5rem;
+}
+.pokemon-card__name, .pokemon-card__description {
+  text-align: center;
+}
+.pokemon-card__name {
+  font-size: 2.6rem;
+  text-transform: capitalize;
+}
+.pokemon-card__name span {
+  color: #f8b788;
+}
+.pokemon-card__description {
+  color: #5c5c5c;
+  font-size: 1.8rem;
+}
+.pokemon-card__footer {
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 0.2rem solid #f7d6bf;
+  margin-top: 1.5rem;
+  padding: 1rem;
+}
+
+.card-footer-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+.card-footer-item p {
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

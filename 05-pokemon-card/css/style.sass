@@ -1,0 +1,100 @@
+$light-orange: #f8b788
+$img-border-color: #f67c55
+$rounded: 50%
+$png-background: #fcd3c6
+$orange: #ff991a
+$global-font: 'Roboto', sans-serif
+$light-gray: #5c5c5c
+$global-size: 1.8rem
+$deep-light-orenge: #f7d6bf
+
+html
+  font-size: 62.5%
+  box-sizing: border-box
+
+*, *:before, *:after
+  margin: 0
+  padding: 0
+
+body
+  font-size: 1.6rem
+  font-family: $global-font
+  background-color: $light-orange
+  background-image: url("../img/top-back-img.svg"),url("../img/bottom-back-img.svg")
+  background-repeat: no-repeat,no-repeat
+  background-position: right 50vw bottom 50vh,left 50vw top 50vh
+
+.container
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100vh
+
+.pokemon-card
+  min-width: 32.8rem
+  width: 32.8rem
+  background-color: #fff
+  border-radius: 1.6rem
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5)
+  overflow: hidden
+
+  &__img-wrap
+    border: 0.5rem solid $img-border-color
+    border-radius: $rounded
+    background-color: $png-background
+    overflow: hidden
+    box-shadow: 0 -1rem 2rem $img-border-color
+    margin-top: calc(-5rem - 0.8rem)
+
+  &__image
+    width: 15rem
+    padding: 2rem
+
+  &__header
+    height: 13rem
+    background-image: url("./../img/header-background-image.svg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+
+  &__body // sass concatenation -> .pokemon-card__body
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 2rem
+
+    padding: 0 1.5rem
+
+  &__name,&__description
+    text-align: center
+
+  &__name
+    font-size: 2.6rem
+    text-transform: capitalize
+
+    span
+      color: $light-orange
+
+  &__description
+    color: $light-gray
+    font-size: $global-size
+
+  &__footer
+    display: flex
+    justify-content: space-evenly
+    border-top: 0.2rem solid #f7d6bf
+    margin-top: 1.5rem
+    padding: 1rem
+
+.card-footer-item
+  text-align: center
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  gap: 1rem
+  cursor: pointer
+
+  p
+    font-weight: bold
+    // color: $light-gray

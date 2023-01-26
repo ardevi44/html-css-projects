@@ -6,27 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokemon Card</title>
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./css/material-icons-styles.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div class="container">
       <article class="pokemon-card">
-        <div class="pokemon-card__back-header"></div>
-        <img src="./img/charizard.png" alt="Charizard Pokemon" />
-        <h2>charizard #26</h2>
-        <p>coleccionable</p>
+        <div class="pokemon-card__header"></div>
+        <div class="pokemon-card__body">
+          <div class="pokemon-card__img-wrap">
+            <img
+              class="pokemon-card__image"
+              src="./img/charizard.png"
+              alt="Charizard Pokemon"
+            />
+          </div>
+          <h2 class="pokemon-card__name">charizard <span>#0006</span></h2>
+          <p class="pokemon-card__description">
+            Escupe un fuego tan caliente que funde las rocas. Causa incendios
+            forestales sin querer.
+          </p>
+        </div>
         <div class="pokemon-card__footer">
-          <div>
-            <p>Poder</p>
-            <span>Icon 1</span>
+          <div class="card-footer-item">
+            <span class="material-symbols-outlined md-36 light-orange">
+              thumb_up
+            </span>
           </div>
-          <div>
-            <p>Resistencia</p>
-            <span>Icon 2</span>
+          <div class="card-footer-item">
+            <span class="material-symbols-outlined md-36 light-orange">
+              thumb_down
+            </span>
           </div>
-          <div>
-            <p>Bonus</p>
-            <span>Icon 3</span>
+          <div class="card-footer-item">
+            <span class="material-symbols-outlined md-36 light-orange">
+              favorite
+            </span>
           </div>
         </div>
       </article>
