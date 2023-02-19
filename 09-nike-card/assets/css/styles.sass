@@ -1,0 +1,154 @@
+html
+  font-size: 62.5%
+  box-sizing: border-box
+
+*,
+*::before,
+*::after
+  box-sizing: inherit
+  margin: 0
+  padding: 0
+
+body
+  background: #161623
+  min-height: 100vh
+  overflow: hidden
+  display: flex
+  justify-content: center
+  align-items: center
+  font-family: sans-serif
+
+.product
+  position: relative
+  background-color: #232323
+  width: 32rem
+  height: 45rem
+  border-radius: 2rem
+  overflow: hidden
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: #b6fcfd
+    clip-path: circle(150px at 80% 20%)
+    transition: 0.5s ease-in-out
+  &::after
+    content: "Nike"
+    position: absolute
+    top: 40%
+    // left: -10%
+    font-size: 12em
+    color: rgba(255, 255, 255, 0.02)
+    font-weight: 800
+    font-style: italic
+    z-index: 1
+  &:hover
+    .product__img-container
+      top: 0
+      transform: translateY(0)
+    .product__description
+      height: 210px
+      .product__size
+        opacity: 1
+        visibility: visible
+        transition-delay: 0.5s
+      .product__color
+        opacity: 1
+        visibility: visible
+        transition-delay: 0.6s
+      a
+        opacity: 1
+        transform: translateY(0px)
+        transition-delay: 0.75s
+    &::before
+      clip-path: circle(300px at 80% -20%)
+  &__img-container
+    position: absolute
+    top: 50%
+    width: 100%
+    height: 22rem
+    z-index: 1
+    transition: 0.5s
+    transform: translateY(-50%)
+    .product__img
+      position: relative
+      top: 50%
+      left: 50%
+      width: 34rem
+      transform: translate(-50%, -50%) rotate(-10deg)
+  &__description
+    position: absolute
+    bottom: 0
+    width: 100%
+    height: 10rem
+    text-align: center
+    transition: 1s
+    z-index: 2
+  &__title
+    font-weight: 600
+    letter-spacing: 0.1rem
+    color: #fff
+    font-size: 4rem
+  &__size, &__color
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 0.8rem 2rem
+    opacity: 0
+    visibility: hidden
+    transition: 0.5s
+    h3
+      color: #fff
+      font-size: 1.2rem
+      text-transform: uppercase
+      letter-spacing: 0.2rem
+      margin-right: 1rem
+  &__size span
+    display: inline-block
+    width: 2.6rem
+    height: 2.6rem
+    text-align: center
+    font-size: 1.4rem
+    color: #fff
+    line-height: 2.8rem
+    background-color: transparent
+    border-radius: 0.4rem
+    margin: 0 0.5rem
+    transition: 0.5s
+    border: 1px solid rgb(255 255 255 / 9%)
+    cursor: pointer
+    &:hover
+      color: #232323
+      background-color: #b6fcfd
+      border: none
+
+  &__color
+    span
+      width: 2rem
+      height: 2rem
+      background-color: #f00
+      border-radius: 50%
+      margin: 0 0.5rem
+      cursor: pointer
+      &:nth-child(2)
+        background-color: #9bdc28
+      &:nth-child(3)
+        background-color: #03a9f4
+      &:nth-child(4)
+        background-color: #e91e63
+  &__description a
+    display: inline-block
+    padding: 1rem 3rem
+    background-color: #b6fcfd
+    border-radius: 0.4rem
+    margin-top: 1rem
+    text-decoration: none
+    font-weight: 600
+    font-size: 1.2rem
+    color: #272727
+    transform: translateY(5rem)
+    transition: 0.5s
+    opacity: 0
