@@ -18,8 +18,6 @@ body {
 
 .netflix-header {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -27,7 +25,7 @@ body {
   padding: 3rem 10rem;
   z-index: 1;
 }
-.netflix-header .logo img {
+.netflix-header__logo img {
   max-width: 15rem;
 }
 .netflix-header .navigation {
@@ -52,8 +50,6 @@ body {
 }
 .netflix-header .search input {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   color: #fff;
@@ -61,7 +57,7 @@ body {
   border: 0.1rem solid rgba(255, 255, 255, 0.5);
   outline: none;
   border-radius: 0.4rem;
-  padding: 0 1rem 0 4.5rem;
+  padding: 0 1rem 0 3.5rem;
   -webkit-backdrop-filter: blur(1rem);
           backdrop-filter: blur(1rem);
 }
@@ -105,7 +101,7 @@ body {
   max-width: 55rem;
 }
 .series-content__title {
-  max-width: 25rem;
+  max-width: 100%;
 }
 .series-content__description {
   color: rgba(255, 255, 255, 0.5);
@@ -136,13 +132,9 @@ body {
   color: #fff;
   margin: 1rem 0 2rem;
 }
-.series-content__actions {
-  position: relative;
-}
 .series-content__actions a {
-  position: relative;
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 1rem;
   background-color: #de0611;
   color: #fff;
   padding: 0.6rem 2rem;
