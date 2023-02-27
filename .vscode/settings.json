@@ -1,0 +1,6 @@
+{
+  "liveSassCompile.settings.includeItems": [
+    "/10-netflix-page/assets/css/styles.sass"
+  ],
+  "liveServer.settings.port": 5503
+}
