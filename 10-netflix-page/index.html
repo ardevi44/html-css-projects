@@ -7,6 +7,10 @@
     <title>Netflix Clone</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
       rel="shortcut icon"
       href="./assets/img/nficon2016.ico"
       type="image/x-icon"
@@ -27,6 +31,9 @@
         </nav>
         <div class="search">
           <input type="text" placeholder="Search" />
+          <button class="search__button">
+            <span class="material-symbols-outlined search__icon"> search </span>
+          </button>
         </div>
       </header>
       <section class="banner">
@@ -63,13 +70,31 @@
               <button class="play-button">Play</button>
               <button class="see-episodes">Episodes</button>
             </div>
-            <button class="watch-trailer">
+            <button class="watch-trailer" onclick="toggleVideo()">
               <img src="./assets/img/play-button-icon.png" />
               <span>Watch Trailer</span>
             </button>
           </div>
         </div>
       </section>
+      <section id="trailer" class="trailer">
+        <video
+          id="trailer-video"
+          class="trailer__video"
+          src="./assets/img/trailer.mp4"
+          controls="true"
+        ></video>
+        <span class="trailer__close-button" onclick="toggleVideo()"></span>
+      </section>
     </div>
+    <script>
+      function toggleVideo() {
+        const trailerSection = document.querySelector("#trailer");
+        const trailerVideo = document.querySelector("#trailer-video");
+        trailerSection.classList.toggle("active");
+        trailerVideo.currentTime = 0;
+        trailerVideo.pause();
+      }
+    </script>
   </body>
 </html>
