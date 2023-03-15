@@ -1,6 +1,6 @@
 {
   "liveSassCompile.settings.includeItems": [
-    "/12-hover/assets/css/styles.sass"
+    "/13-login/assets/css/styles.sass"
   ],
   "liveServer.settings.port": 5503
 }
