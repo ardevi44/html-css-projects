@@ -4,95 +4,80 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Card Hover</title>
   </head>
   <body>
-    <section>
-      <div class="container">
-        <div class="card">
-          <div class="imgBx">
-            <img src="./img/im1.jpg" alt="loki" />
-          </div>
-          <div class="content">
-            <div class="contentBx">
-              <h3>Loki<br /><span>Personaje famoso</span></h3>
-            </div>
-            <ul class="sci">
-              <li style="--i: 1">
-                <a href="#">
-					<ion-icon name="logo-facebook"></ion-icon>
-                </a>
-              </li>
-			  <li style="--i: 2">
-                <a href="#">
-					<ion-icon name="logo-twitter"></ion-icon>
-                </a>
-              </li>
-			  <li style="--i: 3">
-                <a href="#">
-					<ion-icon name="logo-instagram"></ion-icon>
-                </a>
-              </li>
-            </ul>
+    <main class="main-container">
+      <div class="character">
+        <div class="character__img-container">
+          <img src="./assets/img/im1.jpg" alt="loki" />
+        </div>
+        <div class="character__info">
+          <h3>
+            <span class="character__name">Loki</span>
+            <span class="character__description">God of lies</span>
+          </h3>
+          <div class="character__links">
+            <a class="facebook-link" href="#" style="--i: 1">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a class="twitter-link" href="#" style="--i: 2">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+            <a class="instagram-link" href="#" style="--i: 3">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
           </div>
         </div>
-		<div class="card">
-			<div class="imgBx">
-			  <img src="./img/im2.jpg" alt="Thor" />
-			</div>
-			<div class="content">
-			  <div class="contentBx">
-				<h3>Thor<br /><span>Personaje famoso</span></h3>
-			  </div>
-			  <ul class="sci">
-				<li style="--i: 1">
-				  <a href="#">
-					  <ion-icon name="logo-facebook"></ion-icon>
-				  </a>
-				</li>
-				<li style="--i: 2">
-				  <a href="#">
-					  <ion-icon name="logo-twitter"></ion-icon>
-				  </a>
-				</li>
-				<li style="--i: 3">
-				  <a href="#">
-					  <ion-icon name="logo-instagram"></ion-icon>
-				  </a>
-				</li>
-			  </ul>
-			</div>
-		  </div>
-		  <div class="card">
-			<div class="imgBx">
-			  <img src="./img/im3.jpg" alt="loki" />
-			</div>
-			<div class="content">
-			  <div class="contentBx">
-				<h3>Iron man<br /><span>Personaje famoso</span></h3>
-			  </div>
-			  <ul class="sci">
-				<li style="--i: 1">
-				  <a href="#">
-					  <ion-icon name="logo-facebook"></ion-icon>
-				  </a>
-				</li>
-				<li style="--i: 2">
-				  <a href="#">
-					  <ion-icon name="logo-twitter"></ion-icon>
-				  </a>
-				</li>
-				<li style="--i: 3">
-				  <a href="#">
-					  <ion-icon name="logo-instagram"></ion-icon>
-				  </a>
-				</li>
-			  </ul>
-			</div>
-		  </div>
       </div>
-    </section>
+      <div class="character">
+        <div class="character__img-container">
+          <img src="./assets/img/im2.jpg" alt="Thor" />
+        </div>
+        <div class="character__info">
+          <h3>
+            <span class="character__name">Thor</span>
+            <span class="character__description">God of thunder</span>
+          </h3>
+          <div class="character__links">
+            <a class="facebook-link" href="#" style="--i: 1">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a class="twitter-link" href="#" style="--i: 2">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+            <a class="instagram-link" href="#" style="--i: 3">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="character">
+        <div class="character__img-container">
+          <img src="./assets/img/im3.jpg" alt="Ironman" />
+        </div>
+        <div class="character__info">
+          <h3>
+            <span class="character__name">Iron-man</span>
+            <span class="character__description">
+              Genius, millionaire, playboy philanthropist
+            </span>
+          </h3>
+          <div class="character__links">
+            <a class="facebook-link social-link" href="#" style="--i: 1">
+              <ion-icon class="ion-icon" name="logo-facebook"></ion-icon>
+            </a>
+            <a class="twitter-link social-link" href="#" style="--i: 2">
+              <ion-icon class="ion-icon" name="logo-twitter"></ion-icon>
+            </a>
+            <a class="instagram-link social-link" href="#" style="--i: 3">
+              <ion-icon class="ion-icon" name="logo-instagram"></ion-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
