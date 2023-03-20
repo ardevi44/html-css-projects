@@ -21,7 +21,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #f1f4f9, #dff1ff);
+  background-color: #A9C9FF;
+  background-image: linear-gradient(135deg, #A9C9FF 0%, #bf3aa2 100%);
 }
 .container .color {
   position: absolute;
@@ -60,7 +61,7 @@ body {
   box-shadow: 0 2.5rem 4.5rem rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(0.5rem);
           backdrop-filter: blur(0.5rem);
-  backgorund: rgba(228, 8, 209, 0.1);
+  background-color: rgba(228, 8, 209, 0.1);
   animation: animate 10s linear infinite;
   animation-delay: calc(-1s * var(--i));
 }
@@ -97,6 +98,95 @@ body {
   height: 6rem;
   z-index: 2;
 }
+.container .main-container .form-section {
+  width: 40rem;
+  min-height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0.1rem solid rgba(255, 255, 255, 0.5);
+  border-right: 0.1rem solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  box-shadow: 0 2.5rem 4.5rem rgba(0, 0, 0, 0.1);
+}
+.container .main-container .form-section form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+  font-size: 1.6rem;
+}
+.container .main-container .form-section form h2 {
+  position: relative;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  margin-bottom: 4rem;
+}
+.container .main-container .form-section form h2:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+  width: 8rem;
+  height: 0.4rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+.container .main-container .form-section form .input {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 3.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.5);
+  border-left: 0.1rem solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.05);
+  outline: none;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  font-weight: 600;
+}
+.container .main-container .form-section form .input::-moz-placeholder {
+  color: #fff;
+}
+.container .main-container .form-section form .input::placeholder {
+  color: #fff;
+}
+.container .main-container .form-section form .input[type=submit] {
+  background-color: rgba(228, 8, 209, 0.2);
+  color: #fff;
+  font-weight: 600;
+  max-width: 10rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+.container .main-container .form-section form .forgot-password,
+.container .main-container .form-section form .havent-account-yet {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  color: #fff;
+  padding: 0.2rem;
+}
+.container .main-container .form-section form .forgot-password a,
+.container .main-container .form-section form .havent-account-yet a {
+  color: #fff;
+  text-decoration: none;
+}
+.container .main-container .form-section form .forgot-password a:hover,
+.container .main-container .form-section form .havent-account-yet a:hover {
+  text-decoration: underline;
+}
+
 @keyframes animate {
   0%, 100% {
     transform: translateY(-4rem);
