@@ -4,28 +4,6 @@ This repository was forked from [franklin369/cursohtmlcss](https://github.com/Fr
 
 Most of the projects include Sass for the styles. This is my first aproach to this tecnology, so is not perfect but it's working.
 
-Just in case, if you want to see all the demos, use vs code, clone the repository using the `course-development` branch and run the `index.html` file inside of each folder project with the [Live Server extention](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) and there you have it.
-
 ## How did i compile the Sass files?
 
 I used the [Live Sass Compiler extention](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) for this. Because there are just a copple files to deal with. Check the `settings.json` file on the `.vscode` folder to configure the extention and compile the files that you need, or delete its content and use the extention for compile all the sass content in all folders.
-
-## Demos
-
-### Dropdown Items
-![](/demos/animated-menu.gif)
-
-### Bubbles
-![](/demos/bubbles.gif)
-
-### Animated Nike card
-![](/demos/animated-nike-card.gif)
-
-### Netflix clone
-![](/demos/netflix-clone.gif)
-
-### Characters list
-![](/demos/character-list.gif)
-
-### Marvel cards
-![](/demos/marvel-characters.gif)
