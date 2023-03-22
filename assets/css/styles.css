@@ -1,0 +1,147 @@
+:root {
+  --transparent-white-semi-light: rgba(255, 255, 255, 0.5);
+  --transparent-white-soft: rgba(255, 255, 255, 0.2);
+  --transparent-black-soft: rgba(0, 0, 0, 0.1);
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  overflow: hidden;
+  font-size: 1.6rem;
+  color: #101010;
+}
+
+.container {
+  min-width: 32rem;
+  min-height: 100vh;
+  background-color: #ffffff;
+  background-image: linear-gradient(180deg, #ffffff 0%, #83b0ff 100%);
+}
+
+.wellcome-section {
+  height: 18rem;
+  /* background-color: #ffb68e;
+  background-image: linear-gradient(112deg, #ffb68e 0%, #f7ce68 100%); */
+  background-color: #00dbde;
+  background-image: linear-gradient(210deg, #00dbde 0%, #fc00ff 100%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wellcome-message-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 450px;
+  min-width: 260px;
+  height: 100%;
+}
+
+.box {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  border: 0.1rem solid var(--transparent-white-semi-light);
+  border-right: 0.1rem solid var(--transparent-white-soft);
+  border-bottom: 0.1rem solid var(--transparent-white-soft);
+  box-shadow: 0 2.5rem 4.5rem var(--transparent-black-soft);
+  backdrop-filter: blur(0.5rem);
+  animation: animate 10s linear infinite;
+  animation-delay: calc(-1s * var(--i));
+  /* background-color: ; */
+}
+
+.box:nth-child(1) {
+  width: 10rem;
+  height: 10rem;
+  top: -2rem;
+  right: -5rem;
+}
+
+.box:nth-child(2) {
+  width: 10rem;
+  height: 10rem;
+  bottom: 0;
+  left: -7rem;
+  z-index: 2;
+}
+
+.box:nth-child(3) {
+  width: 8rem;
+  height: 8rem;
+  bottom: 1rem;
+  right: 4rem;
+}
+
+.box:nth-child(4) {
+  width: 5rem;
+  height: 5rem;
+  top: 1rem;
+  left: 6rem;
+  z-index: 1;
+}
+
+.box:nth-child(5) {
+  width: 6rem;
+  height: 6rem;
+  top: -2rem;
+  right: 10rem;
+}
+
+.box:nth-child(6) {
+  width: 8rem;
+  height: 8rem;
+  top: 1rem;
+  left: 0;
+}
+
+.wellcome-section h2 {
+  font-size: 2.8rem;
+  color: #fff;
+  z-index: 1;
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 700px) {
+  .wellcome-section h2 {
+    font-size: 4rem;
+  }
+}
+
+.main-section-container {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: translateY(-6rem);
+  }
+  50% {
+    transform: translateY(8rem);
+  }
+}
