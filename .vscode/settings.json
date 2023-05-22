@@ -1,6 +1,6 @@
 {
   "liveSassCompile.settings.includeItems": [
-    "/14-nether-waves/assets/css/styles.sass"
+    "/15-nike-page/assets/css/styles.sass"
   ],
   "liveServer.settings.port": 5503
 }
