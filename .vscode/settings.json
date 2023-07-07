@@ -1,6 +1,6 @@
 {
   "liveSassCompile.settings.includeItems": [
-    "/15-nike-page/assets/css/styles.sass"
+    "/17-travel-landing-page/assets/css/style.scss"
   ],
   "liveServer.settings.port": 5503
 }
