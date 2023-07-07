@@ -111,4 +111,12 @@ body {
 .social-icon {
   font-size: 38px;
   color: #fff;
+}
+@keyframes tennis {
+  0%, 100% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
 }/*# sourceMappingURL=styles.css.map */
