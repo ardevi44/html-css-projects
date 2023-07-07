@@ -11,37 +11,27 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  min-height: 100vh;
-  padding: 4rem 4rem 0;
-  position: relative;
-  font-family: sans-serif;
-  background: linear-gradient(to bottom, #d509a0, #ff606e);
-  overflow: hidden;
-}
-body::before {
-  position: absolute;
-  content: "ZOOMX";
-  font-size: 20vw;
-  font-weight: 900;
-  color: rgba(0, 0, 0, 0.0666666667);
-  padding-top: 3vh;
+.w-90-m-auto {
+  width: 80%;
+  margin: 0 auto;
 }
 
-.main-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 2rem 4rem;
+body {
+  position: relative;
+  font-family: "Quicksand", sans-serif;
+  background: linear-gradient(to bottom, #d509a0, #ff606e);
+}
+
+.main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  margin-top: 3rem;
 }
-.main-header .logo-link .logo-img {
+.main-nav .logo-link .logo-img {
   max-width: 10rem;
 }
-.main-header .toggle-menu {
+.main-nav .toggle-menu {
   width: 3rem;
   height: 3rem;
   background: url("../img/menu.png");
@@ -51,34 +41,49 @@ body::before {
   cursor: pointer;
 }
 
-main.content {
-  margin-top: 4rem;
+.main-product {
+  margin-top: 6rem;
   position: relative;
 }
-main.content .img-container {
+.main-product::before {
+  position: absolute;
+  content: "ZOOMX";
+  font-size: 20vw;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.0666666667);
+  top: -3rem;
+  right: -2rem;
+}
+.main-product .img-container {
   display: flex;
   justify-content: center;
 }
-main.content .img-container img {
+.main-product .img-container img {
   max-width: 100%;
+  z-index: 1;
   animation: tennis 3.3s linear infinite;
 }
-main.content .text-info {
-  max-width: 70rem;
-  margin-top: 2rem;
+.main-product .text-info {
+  margin-top: 6rem;
   color: #fff;
 }
-main.content .text-info .tennis-name {
-  font-size: 4rem;
-  font-weight: 800;
+.main-product .text-info .tennis-name {
+  font-size: 4.8rem;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: -1.5px;
+  line-height: 1;
 }
-main.content .text-info .tennis-description {
-  font-size: 1.8rem;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 300;
+.main-product .text-info .tennis-description {
+  font-size: 2.4rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  letter-spacing: -0.5px;
+  line-height: 1.5;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
 }
-main.content .text-info .details-link {
+.main-product .text-info .details-link {
   display: inline-block;
   padding: 1rem 3rem;
   color: #111;
@@ -86,17 +91,24 @@ main.content .text-info .details-link {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.2rem;
-  margin-top: 1.5rem;
   font-family: "Quicksand", sans-serif;
   font-size: 1.6rem;
   font-weight: 800;
 }
 
 @media (min-width: 600px) {
-  body {
-    padding: 10rem 10rem 0;
+  .main-product .img-container {
+    justify-content: flex-start;
   }
-  .main-header {
-    padding: 4rem 10rem;
-  }
+}
+.social-network-section {
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.social-icon {
+  font-size: 38px;
+  color: #fff;
 }/*# sourceMappingURL=styles.css.map */
