@@ -1,6 +1,6 @@
 {
   "liveSassCompile.settings.includeItems": [
-    "/17-travel-landing-page/assets/css/style.scss"
+    "/17-travel-landing-page/assets/css/styles.scss"
   ],
   "liveServer.settings.port": 5503
 }
