@@ -23,7 +23,10 @@
   margin: 0 auto;
 }
 
-.btn-container {
-  display: flex;
-  justify-content: end;
+.btn-container-end {
+  @include mixins.btn-container(flex-end);
+}
+
+.btn-container-center {
+  @include mixins.btn-container(center);
 }
