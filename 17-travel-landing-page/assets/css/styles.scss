@@ -1,6 +1,7 @@
 /*
 FONT FAMILY
 'Montserrat', sans-serif;
+'Inter', sans-serif;
 
 FONT SIZE SYSTEM
 48px | 40px | 33px | 28px | 23px | 19px
@@ -8,18 +9,13 @@ FONT SIZE SYSTEM
 */
 
 // COLOR VARIABLES
-$main-green: #00cec9;
-$darker-main-green: #006765;
-$darker-sahdow: #001514;
+$main-green: #00cec9; /* main color */
+$main-green-darker: #003e3c;
 $button-primary-shadow: #00b9b5;
-
-$light-main-green: #80e7e4;
-$light-shadow: #e6fafa;
+$button-primary-hover: #00b9b5;
+$main-green-lighter: #66e2df;
+$main-green-very-light: #ccf5f4;
 $white: #ffffff;
-
-$accent-color: #6c5ce7;
-$darker-accent: #2b255c;
-$light-accent: #b6aef3;
 
 html {
   font-size: 62.5%;
@@ -36,6 +32,7 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
+  min-width: 34.0rem;
 }
 
 // NAVBAR SECTION
@@ -76,6 +73,7 @@ body {
   font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 0px;
+  font-weight: 500;
 }
 
 .btn--primary {
@@ -84,7 +82,7 @@ body {
 }
 
 .btn--primary:hover {
-  background-color: $button-primary-shadow;
+  background-color: $button-primary-hover;
 }
 
 .w-90 {
@@ -93,6 +91,11 @@ body {
 
 .mlr-auto {
   margin: 0 auto;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: end;
 }
 
 // BANNER SECTION
@@ -105,21 +108,25 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
-  padding-top: 15rem;
+  padding-top: 14rem;
   .main-title {
     font-size: 5rem;
     text-transform: uppercase;
     font-weight: 700;
     line-height: 1;
     letter-spacing: -2px;
-    color: $white;
+    color: $main-green;
     margin-bottom: 2rem;
+    span {
+      color: $main-green-darker;
+    }
   }
   .main-text {
-    font-size: 1.8rem;
-    color: #fff;
+    font-size: 2.3rem;
+    color: $white;
     margin-bottom: 5rem;
+    line-height: 1.5;
+    // font-family: 'Inter', sans-serif;
   }
 
   @media (min-width: 768px) {
