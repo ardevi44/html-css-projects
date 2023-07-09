@@ -1,21 +1,6 @@
-/*
-FONT FAMILY
-'Montserrat', sans-serif;
-'Inter', sans-serif;
-
-FONT SIZE SYSTEM
-48px | 40px | 33px | 28px | 23px | 19px
-
-*/
-
-// COLOR VARIABLES
-$main-green: #00cec9; /* main color */
-$main-green-darker: #003e3c;
-$button-primary-shadow: #00b9b5;
-$button-primary-hover: #00b9b5;
-$main-green-lighter: #66e2df;
-$main-green-very-light: #ccf5f4;
-$white: #ffffff;
+@use "variables";
+@use "mixins";
+@use "utilities";
 
 html {
   font-size: 62.5%;
@@ -31,11 +16,12 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: variables.$montserrat;
   min-width: 34.0rem;
 }
 
 // NAVBAR SECTION
+
 .nav {
   display: flex;
   align-items: center;
@@ -50,55 +36,17 @@ body {
   .page-logo:link, .page-logo:visited {
     font-size: 2.8rem;
     text-decoration: none;
-    color: $main-green;
+    color: variables.$main-green;
   }
   .toogle-icon {
     width: 5rem;
     height: 5rem;
-    stroke: $main-green;
+    stroke: variables.$main-green;
   }
 }
 
-// UTILITY
-.btn, .btn:link {
-  min-width: 14rem;
-  height: 4.5rem;
-  padding: 2rem;
-  text-decoration: none;
-  border-radius: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  // font-size: 1.8rem;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0px;
-  font-weight: 500;
-}
-
-.btn--primary {
-  background-color: $main-green;
-  color: #fff;
-}
-
-.btn--primary:hover {
-  background-color: $button-primary-hover;
-}
-
-.w-90 {
-  width: 90%;
-}
-
-.mlr-auto {
-  margin: 0 auto;
-}
-
-.btn-container {
-  display: flex;
-  justify-content: end;
-}
-
 // BANNER SECTION
+
 .banner {
   min-height: 100vh;
   background-image: url("../img/banner.jpg");
@@ -108,25 +56,20 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 14rem;
+  padding-top: 12rem;
   .main-title {
-    font-size: 5rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: -2px;
-    color: $main-green;
-    margin-bottom: 2rem;
+    @include mixins.main-text();
+    color: variables.$main-green;
+    margin-bottom: 5rem;
     span {
-      color: $main-green-darker;
+      color: variables.$main-green-darker;
     }
   }
-  .main-text {
-    font-size: 2.3rem;
-    color: $white;
+  .banner-text {
+    @include mixins.normal-text-styles();
+    color: variables.$white;
     margin-bottom: 5rem;
-    line-height: 1.5;
-    // font-family: 'Inter', sans-serif;
+    font-weight: 500;
   }
 
   @media (min-width: 768px) {

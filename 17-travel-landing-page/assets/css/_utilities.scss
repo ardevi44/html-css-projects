@@ -1,0 +1,29 @@
+// UTILITIES
+@use "variables";
+@use "mixins";
+
+.btn--small, .btn--small:link {
+  @include mixins.btn-small-styles();
+}
+
+.btn--primary {
+  background-color: variables.$main-green;
+  color: variables.$white;
+}
+
+.btn--primary:hover {
+  background-color: variables.$button-primary-hover;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.mlr-auto {
+  margin: 0 auto;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: end;
+}

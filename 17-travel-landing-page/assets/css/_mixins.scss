@@ -1,0 +1,32 @@
+@use "variables";
+
+// MIXINS
+@mixin main-text {
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -2px;
+  font-size: variables.$main-title-size;
+}
+
+@mixin btn-small-styles {
+  min-width: 15rem;
+  height: 5rem;
+  padding: 2rem;
+  text-decoration: none;
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  &:link {
+    text-decoration: none;
+  }
+}
+
+@mixin normal-text-styles {
+  line-height: 1.5;
+  font-size: 2.3rem;
+}
