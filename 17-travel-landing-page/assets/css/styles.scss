@@ -79,62 +79,84 @@ body {
   }
     
   }
-  .banner-button {
-    z-index: 1;
-  }
+.banner-button {
+  z-index: 1;
+}
 
   // MOST POPULAR DESTINATION
 
-  .popular-destination {
-    background-color: variables.$darker-shadow;
-    position: relative;
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-    display: flex;
-    flex-direction: column;
-    gap: 6rem;
-    &::before {
-      content: "";
-      position: absolute;
-      top: -200px;
-      left: 0;
+.popular-destination {
+  @include mixins.normal-section-styles();
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to top, #111, transparent);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -399px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    height: 400px;
+    background: linear-gradient(to bottom, #111, transparent);
+  }
+  .popular-destination-title {
+    @include mixins.main-section-title();
+  }
+  .popular-destination-text {
+    @include mixins.normal-text-styles();
+  }
+  .img-container {
+    height: 25rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    img {
       width: 100%;
-      height: 200px;
-      background: linear-gradient(to top, #111, transparent);
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -400px;
-      left: 0;
-      width: 100%;
-      height: 400px;
-      background: linear-gradient(to bottom, #111, transparent);
-    }
-    .popular-destination-title {
-      @include mixins.main-text();
-      font-size: variables.$section-title-size;
-      color: variables.$white;
-      text-align: center;
-      font-weight: 500;
-      text-transform: none;
-      text-align: center;
-      // margin-bottom: 5rem;
-    }
-    .popular-destination-text {
-      @include mixins.normal-text-styles();
-      color: variables.$white;
-      text-align: center;
-      // margin-bottom: 5rem;
-    }
-    .img-container {
-      height: 25rem;
-      border-radius: 1.5rem;
-      overflow: hidden;
-      img {
-        width: 100%;
-        object-fit: cover;
-        height: 100%;
-      }
+      object-fit: cover;
+      height: 100%;
     }
   }
+}
+
+// SECOND BANNER
+
+.second-banner {
+  min-height: 80vh;
+  background-image: url(variables.$second-banner-background);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 1000;
+    background: linear-gradient(to top, #111, transparent);
+  }
+}
+
+// PARADISE DESTINATIONS
+.paradise-destinations {
+  @include mixins.normal-section-styles();
+}
+
+.paradise-destinations-title {
+  @include mixins.main-section-title();
+}
+
+.paradise-destinations-text {
+  @include mixins.normal-text-styles();
+}

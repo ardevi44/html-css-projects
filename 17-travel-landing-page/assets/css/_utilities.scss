@@ -12,19 +12,23 @@
   box-shadow: variables.$button-primary-shadow;
 }
 
+/*
 .btn--secondary {
   background-color: variables.$main-green-darker;
   color: variables.$white;
   box-shadow: variables.$button-secondary-shadow;
 }
+*/
 
 .btn--primary:hover {
   background-color: variables.$button-primary-hover;
 }
 
+/*
 .btn--secondary:hover {
   background-color: variables.$main-green;
 }
+*/
 
 .w-90 {
   width: 90%;
