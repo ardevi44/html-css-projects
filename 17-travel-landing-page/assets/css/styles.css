@@ -147,7 +147,7 @@ body {
 }
 
 .banner-button {
-  z-index: 1;
+  z-index: 4;
 }
 
 .popular-destination {
@@ -165,21 +165,24 @@ body {
 .popular-destination::before {
   content: "";
   position: absolute;
-  top: -200px;
   left: 0;
   width: 100%;
-  height: 200px;
+  height: 20rem;
+  z-index: 3;
   background: linear-gradient(to top, #111, transparent);
+  top: -20rem;
+  bottom: unset;
 }
 .popular-destination::after {
   content: "";
   position: absolute;
-  bottom: -399px;
   left: 0;
   width: 100%;
-  z-index: 1;
-  height: 400px;
+  height: 40rem;
+  z-index: 3;
   background: linear-gradient(to bottom, #111, transparent);
+  top: unset;
+  bottom: -39.9rem;
 }
 .popular-destination .popular-destination-title {
   text-transform: uppercase;
@@ -222,15 +225,16 @@ body {
 .second-banner::after {
   content: "";
   position: absolute;
-  bottom: -1px;
   left: 0;
   width: 100%;
-  height: 400px;
-  z-index: 1000;
+  height: 40rem;
+  z-index: 3;
   background: linear-gradient(to top, #111, transparent);
+  top: unset;
+  bottom: -1px;
 }
 
-.paradise-destinations {
+.destinations-cards {
   background-color: #111;
   position: relative;
   padding-top: 7rem;
@@ -240,7 +244,7 @@ body {
   gap: 6rem;
 }
 
-.paradise-destinations-title {
+.destinations-cards-title {
   text-transform: uppercase;
   font-weight: 700;
   line-height: 1;
@@ -253,7 +257,52 @@ body {
   text-transform: none;
 }
 
-.paradise-destinations-text {
+.destinations-cards-text {
+  line-height: 1.5;
+  font-size: 2.3rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.destinations-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.destination-card {
+  position: relative;
+  min-height: 48rem;
+  max-width: 40rem;
+  width: 100%;
+  background-color: transparent;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  transition: 0.5s;
+}
+
+.destination-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.8;
+}
+
+.destination-name {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: rgba(25, 25, 25, 0.74);
+}
+.destination-name h3 {
   line-height: 1.5;
   font-size: 2.3rem;
   color: #ffffff;

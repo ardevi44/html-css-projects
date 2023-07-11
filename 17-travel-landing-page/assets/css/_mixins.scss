@@ -57,3 +57,30 @@
   display: flex;
   justify-content: $position;
 }
+
+@mixin banner-viewport-height ($viewport-height: 80vh, $url-img) {
+  min-height: $viewport-height;
+  background-image: url($url-img);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+// Top or Bottom
+@mixin shadow-position ($top-position: unset, $bottom-position: unset) {
+  top: $top-position;
+  bottom: $bottom-position;
+}
+
+// Shadow bottom component
+
+@mixin shadow ($height: unset, $to-top-or-bottom) {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: $height;
+  z-index: 3;
+  background: linear-gradient(#{$to-top-or-bottom}, variables.$darker-shadow, transparent);
+}
