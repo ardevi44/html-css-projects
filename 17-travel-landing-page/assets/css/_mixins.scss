@@ -84,3 +84,10 @@
   z-index: 3;
   background: linear-gradient(#{$to-top-or-bottom}, variables.$darker-shadow, transparent);
 }
+
+@mixin thin-text () {
+  font-size: 1.9rem;
+  font-weight: normal;
+  color: variables.$main-green-very-light;
+  text-align: center;
+}

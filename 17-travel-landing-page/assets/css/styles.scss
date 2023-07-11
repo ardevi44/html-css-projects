@@ -180,3 +180,38 @@ body {
     @include mixins.normal-text-styles();
   }
 }
+
+// THIRTH BANNER
+
+.thirth-banner {
+  @include mixins.banner-viewport-height($url-img: variables.$mountain-img-background);
+  &::before {
+    @include mixins.shadow(40rem, to bottom);
+    @include mixins.shadow-position($top-position: -1px);
+  }
+  &::after {
+    @include mixins.shadow(40rem, to top);
+    @include mixins.shadow-position($bottom-position: -1px);
+  }
+}
+
+// FOOTER
+
+.social-networks {
+  background-color: variables.$darker-shadow;
+}
+
+.social-networks-icons {
+  gap: 4rem;
+}
+
+.social-icon {
+  stroke: variables.$main-green-very-light;
+  width: 5rem;
+  height: 5rem;
+}
+
+.copyright {
+  margin-top: 2rem;
+  @include mixins.thin-text();
+}

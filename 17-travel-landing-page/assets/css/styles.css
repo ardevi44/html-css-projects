@@ -307,4 +307,57 @@ body {
   font-size: 2.3rem;
   color: #ffffff;
   text-align: center;
+}
+
+.thirth-banner {
+  min-height: 80vh;
+  background-image: url("../img/banner3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.thirth-banner::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 40rem;
+  z-index: 3;
+  background: linear-gradient(to bottom, #111, transparent);
+  top: -1px;
+  bottom: unset;
+}
+.thirth-banner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 40rem;
+  z-index: 3;
+  background: linear-gradient(to top, #111, transparent);
+  top: unset;
+  bottom: -1px;
+}
+
+.social-networks {
+  background-color: #111;
+}
+
+.social-networks-icons {
+  gap: 4rem;
+}
+
+.social-icon {
+  stroke: #ccf5f4;
+  width: 5rem;
+  height: 5rem;
+}
+
+.copyright {
+  margin-top: 2rem;
+  font-size: 1.9rem;
+  font-weight: normal;
+  color: #ccf5f4;
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */
