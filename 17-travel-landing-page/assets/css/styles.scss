@@ -67,9 +67,9 @@ body {
   }
   .banner-text {
     @include mixins.normal-text-styles();
-    color: variables.$white;
     margin-bottom: 5rem;
     font-weight: 500;
+    text-align: start;
   }
 
   @media (min-width: 768px) {
